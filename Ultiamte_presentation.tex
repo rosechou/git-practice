@@ -440,6 +440,21 @@
   	\end{itemize}
 \end{frame}
 
+\begin{frame}{B\"uchi Program and B\"uchi Program Product}
+  	\begin{itemize}
+		\item Definition (B\"uchi program product)
+		\begin{itemize}
+			\item the set of fair locations contains all pairs where the second component is an accepting state of the B\"uchi automaton, i.e., \\ $Loc_{{F}_{B}}$ = {($l$, $q$) $\mid$ $l$ $\in$ $Loc$ and $q$ $\in$ $F$}.
+		\end{itemize}
+		\item The following theorem shows how we can use the B\"uchi program product to check if a program satisfies an LTL property.
+		\begin{theorem}
+			The program $P$ satisfies the LTL property $\varphi$ if and only if the Büchi program product $B$ = $P$ $\otimes$ A$\neg\varphi$  does not have a trace that is fair and feasible, i.e.,\\
+			$P$ $\models$ $\varphi$ iff $T_{fair}$(B) $\cap$ $T_{feas}(B)$ = $\emptyset$
+		\end{theorem}
+		\item We conclude that the intersection $T_{fair}$(B) $\cap$ $T_{feas}(B)$ is empty if and only if each program execution of $P$ satisfies the LTL property $\varphi$.
+  	\end{itemize}
+\end{frame}
+
 % ===================== Chapter 8 end ====================
 
 \begin{frame}{Reference}
